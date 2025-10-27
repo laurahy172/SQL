@@ -11,6 +11,24 @@ The following set of methods cover three types of data cleaning techniques: pars
 
 # LEFT, RIGHT, SUBSTR
 <img width="665" height="260" alt="image" src="https://github.com/user-attachments/assets/992cbd27-30d0-4ff0-9e38-3094d9568c4b" />
+<img width="674" height="257" alt="image" src="https://github.com/user-attachments/assets/8308213a-6b36-41ba-9691-1732c937d109" />
+
+Syntax
+- Left: Extracts a # of characters from a string starting from the left
+- Right: Extracts a # of characters from a string starting from the right
+
+```sql 
+LEFT(student_information, 8) AS student_id
+RIGHT(student_information, 6) AS salary
+```
+Use Case
+Typically when a single column holds too much info from a raw data dump and needs to be parsed to make the data usable
+
+LEFT(string, number_of_chars)
+
+string: The string you are parsing
+
+number_of_chars: How many characters you'd like to extract
 
 # STRING_SPLIT
 
