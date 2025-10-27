@@ -12,6 +12,8 @@ The following set of methods cover three types of data cleaning techniques: pars
 # LEFT, RIGHT, SUBSTR
 <img width="665" height="260" alt="image" src="https://github.com/user-attachments/assets/992cbd27-30d0-4ff0-9e38-3094d9568c4b" />
 <img width="674" height="257" alt="image" src="https://github.com/user-attachments/assets/8308213a-6b36-41ba-9691-1732c937d109" />
+<img width="674" height="257" alt="image" src="https://github.com/user-attachments/assets/37cee23b-2b09-4a5a-9327-4c1cde7582cf" />
+<img width="674" height="259" alt="image" src="https://github.com/user-attachments/assets/549b654c-4e5b-4742-b8f9-4376b7009060" />
 
 Syntax
 - Left: Extracts a # of characters from a string starting from the left
