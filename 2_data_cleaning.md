@@ -1,4 +1,16 @@
+The following set of methods cover three types of data cleaning techniques: parsing information, returning where information lives, and changing the data type of the information.
+
+- Left: Extracts a number of characters from a string starting from the left
+- Right: Extracts a number of characters from a string starting from the right
+- Substr: Extracts a substring from a string (starting at any position)
+- Position: Returns the position of the first occurrence of a substring in a string
+- Strpos: Returns the position of a substring within a string
+- Concat: Adds two or more expressions together
+- Cast: Converts a value of any type into a specific, different data type
+- Coalesce: Returns the first non-null value in a list
+
 # LEFT, RIGHT, SUBSTR
+<img width="665" height="260" alt="image" src="https://github.com/user-attachments/assets/992cbd27-30d0-4ff0-9e38-3094d9568c4b" />
 
 # STRING_SPLIT
 
