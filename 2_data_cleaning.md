@@ -93,6 +93,8 @@ This would not work correctly because you are comparing a string (the first char
 ```sql
 SELECT STRING_TO_ARRAY('apple,banana,cherry', ',') AS fruits; -- PostgreSQL
 STRING_SPLIT('apple,banana,cherry', ','); -- sql server
+SELECT (STRING_TO_ARRAY('apple,banana,cherry', ','))[2] AS second_part;
+
 ```
 
 # CONCAT
