@@ -22,6 +22,36 @@ Syntax
 ```sql 
 LEFT(student_information, 8) AS student_id
 RIGHT(student_information, 6) AS salary
+
+select count(*), right(website,3) as type_of_website from accounts group by right(website,3) 
+select count(*), left(name,1) as company_initial from accounts group by left(name,1)
+
+
+SELECT RIGHT(website, 3) AS domain, COUNT(*) num_companies
+FROM accounts
+GROUP BY 1
+ORDER BY 2 DESC;
+
+SELECT LEFT(UPPER(name), 1) AS first_letter, COUNT(*) num_companies
+FROM accounts
+GROUP BY 1
+ORDER BY 2 DESC;
+
+SELECT SUM(num) nums, SUM(letter) letters
+FROM (SELECT name, CASE WHEN LEFT(UPPER(name), 1) IN ('0','1','2','3','4','5','6','7','8','9') 
+                          THEN 1 ELSE 0 END AS num, 
+            CASE WHEN LEFT(UPPER(name), 1) IN ('0','1','2','3','4','5','6','7','8','9') 
+                          THEN 0 ELSE 1 END AS letter
+         FROM accounts) t1;
+
+
+SELECT SUM(vowels) vowels, SUM(other) other
+FROM (SELECT name, CASE WHEN LEFT(UPPER(name), 1) IN ('A','E','I','O','U') 
+                           THEN 1 ELSE 0 END AS vowels, 
+             CASE WHEN LEFT(UPPER(name), 1) IN ('A','E','I','O','U') 
+                          THEN 0 ELSE 1 END AS other
+            FROM accounts) t1;
+
 ```
 Use Case
 Typically when a single column holds too much info from a raw data dump and needs to be parsed to make the data usable
@@ -31,6 +61,31 @@ LEFT(string, number_of_chars)
 string: The string you are parsing
 
 number_of_chars: How many characters you'd like to extract
+
+
+----
+## Q1
+SELECT SUM(num) nums, SUM(letter) letters
+FROM (SELECT name, CASE WHEN LEFT(UPPER(name), 1) IN ('0','1','2','3','4','5','6','7','8','9')
+THEN 1 ELSE 0 END AS num,
+CASE WHEN LEFT(UPPER(name), 1) IN ('0','1','2','3','4','5','6','7','8','9')
+THEN 0 ELSE 1 END AS letter
+FROM accounts) t1; 如果写 in (1,2,3,4,5...) 不是 ('1','2','3','4',...) 可以吗
+
+A:
+1. In SQL, when you are using the IN clause to check for values, the data types of the values you are comparing must match the data type of the column you are checking against.
+2. In your query, you are using LEFT(UPPER(name), 1), which extracts the first character of the name column and converts it to uppercase. If the name column contains string values, you should compare against string representations of the numbers, like this:
+3. CASE WHEN LEFT(UPPER(name), 1) IN ('0','1','2','3','4','5','6','7','8','9') 
+
+If you were to use numeric values instead, like this:
+CASE WHEN LEFT(UPPER(name), 1) IN (0, 1, 2, 3, 4, 5, 6, 7, 8, 9)
+This would not work correctly because you are comparing a string (the first character of the name) against numeric values. The comparison would not yield the expected results, as the types do not match.
+-----
+
+
+
+
+
 
 # STRING_SPLIT
 
