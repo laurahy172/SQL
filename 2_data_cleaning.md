@@ -94,7 +94,6 @@ This would not work correctly because you are comparing a string (the first char
 SELECT STRING_TO_ARRAY('apple,banana,cherry', ',') AS fruits; -- PostgreSQL
 STRING_SPLIT('apple,banana,cherry', ','); -- sql server
 SELECT (STRING_TO_ARRAY('apple,banana,cherry', ','))[2] AS second_part;
-
 ```
 
 # CONCAT
@@ -102,10 +101,17 @@ SELECT (STRING_TO_ARRAY('apple,banana,cherry', ','))[2] AS second_part;
 <img width="646" height="273" alt="image" src="https://github.com/user-attachments/assets/1ae6c306-71e5-4368-a688-aaaefa13a057" />
 ```sql
 select concat(s.id,'_',r.name) as emp_id_region from sales_reps as s join region r on s.region_id = r.id
-
 select concat(account_id,'_',channel,'_', count(*)) from web_events group by account_id, channel order by count(*) DESC
+SELECT NAME, CONCAT(LAT, ', ', LONG) COORDINATE, CONCAT(LEFT(PRIMARY_POC, 1), RIGHT(PRIMARY_POC, 1), '@', SUBSTR(WEBSITE, 5)) EMAIL FROM ACCOUNTS;
 
-
+WITH T1 AS (
+SELECT ACCOUNT_ID, CHANNEL, COUNT(*) 
+FROM WEB_EVENTS
+GROUP BY ACCOUNT_ID, CHANNEL
+ORDER BY ACCOUNT_ID
+)
+SELECT CONCAT(T1.ACCOUNT_ID, '_', T1.CHANNEL, '_', COUNT)
+FROM T1;
 
 ```
 
