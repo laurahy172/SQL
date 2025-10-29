@@ -120,10 +120,20 @@ FROM T1;
 <img width="635" height="238" alt="image" src="https://github.com/user-attachments/assets/3202f95b-a9e2-4d97-8310-c1169b451ea1" />
 <img width="661" height="260" alt="image" src="https://github.com/user-attachments/assets/1e6807fd-18d5-45e2-a4ee-16684b2ffef5" />
 <img width="427" height="338" alt="image" src="https://github.com/user-attachments/assets/694ae255-352d-420a-9a03-21080904381a" />
+<img width="454" height="245" alt="image" src="https://github.com/user-attachments/assets/49a5a6ca-1fc0-483f-b5b0-a4fb6e2e111d" />
+
 ```sql
 select  concat(substr(date,7,4),'_',substr(date,1,2),'_',substr(date,4,2))   from sf_crime_data limit 10
-
+SELECT date orig_date, (SUBSTR(date, 7, 4) || '-' || LEFT(date, 2) || '-' || SUBSTR(date, 4, 2)) new_date
+FROM sf_crime_data;
+SELECT date AS orig_date, CAST((SUBSTR(date, 7, 4) || '-' || LEFT(date, 2) || '-' || SUBSTR(date, 4, 2)) AS DATE) new_date
+FROM sf_crime_data;
+SELECT date orig_date, (SUBSTR(date, 7, 4) || '-' || LEFT(date, 2) || '-' || SUBSTR(date, 4, 2))::DATE AS new_date
+FROM sf_crime_data;
 ```
+Observe how we use || to concatenate strings and :: to cast data types in our queries. These operators serve as shorthand alternatives to CONCAT() and CAST(), simplifying syntax while performing the same functions.
+Execute these solutions in the below workspace.
+
 
 # POSITION
 
