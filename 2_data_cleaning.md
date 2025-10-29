@@ -88,6 +88,8 @@ This would not work correctly because you are comparing a string (the first char
 
 
 # STRING_SPLIT
+<img width="691" height="280" alt="image" src="https://github.com/user-attachments/assets/6fa35dc8-37a5-4b7c-923a-8485015caafb" />
+
 
 # CONCAT
 
