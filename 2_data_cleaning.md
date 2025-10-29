@@ -92,6 +92,16 @@ This would not work correctly because you are comparing a string (the first char
 
 
 # CONCAT
+<img width="646" height="274" alt="image" src="https://github.com/user-attachments/assets/dc895c7a-b089-46b2-b97d-62a6b9549e75" />
+<img width="646" height="273" alt="image" src="https://github.com/user-attachments/assets/1ae6c306-71e5-4368-a688-aaaefa13a057" />
+```sql
+select concat(s.id,'_',r.name) as emp_id_region from sales_reps as s join region r on s.region_id = r.id
+
+select concat(account_id,'_',channel,'_', count(*)) from web_events group by account_id, channel order by count(*) DESC
+
+
+
+```
 
 # CAST
 
