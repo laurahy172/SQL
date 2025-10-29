@@ -90,6 +90,10 @@ This would not work correctly because you are comparing a string (the first char
 # STRING_SPLIT
 <img width="691" height="280" alt="image" src="https://github.com/user-attachments/assets/6fa35dc8-37a5-4b7c-923a-8485015caafb" />
 
+```sql
+SELECT STRING_TO_ARRAY('apple,banana,cherry', ',') AS fruits; -- PostgreSQL
+STRING_SPLIT('apple,banana,cherry', ','); -- sql server
+```
 
 # CONCAT
 <img width="646" height="274" alt="image" src="https://github.com/user-attachments/assets/dc895c7a-b089-46b2-b97d-62a6b9549e75" />
