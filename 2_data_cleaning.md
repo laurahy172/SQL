@@ -228,3 +228,9 @@ Relevant Definitions:
 - Adjusting a column that includes multiple currencies to one common currency
 - Adjusting the varied distribution of a column value by transforming it into a z-score
 - Converting all price into a common metric (e.g., price per ounce)
+
+
+
+<img width="524" height="430" alt="image" src="https://github.com/user-attachments/assets/46ea4612-f691-4625-a9ec-2a2d5532f3eb" />
+LENGTH(name)
+REPLACE(name,' ','')
