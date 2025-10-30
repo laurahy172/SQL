@@ -1,3 +1,6 @@
+Data Cleaning
+=============
+
 The following set of methods cover three types of data cleaning techniques: parsing information, returning where information lives, and changing the data type of the information.
 
 - Left: Extracts a number of characters from a string starting from the left
@@ -194,6 +197,30 @@ We would also like to create an initial password, which they will change after t
 <img width="485" height="225" alt="image" src="https://github.com/user-attachments/assets/3e34fee5-cda6-4adb-b330-c6a238b943a8" />
 <img width="623" height="251" alt="image" src="https://github.com/user-attachments/assets/dad68064-1f9e-4866-8d25-00be5e8133ad" />
 return the first non-null values as the annual income column
+
+```sql
+SELECT *
+FROM accounts a
+LEFT JOIN orders o
+ON a.id = o.account_id
+WHERE o.total IS NULL; --- by default this is a left join
+
+SELECT COALESCE(o.account_id, a.id) account_id, a.name, a.website, a.lat, a.long, a.primary_poc, a.sales_rep_id, o.occurred_at, o.standard_qty, o.gloss_qty, o.poster_qty, o.total, o.standard_amt_usd, o.gloss_amt_usd, o.poster_amt_usd, o.total_amt_usd
+FROM accounts a
+LEFT JOIN orders o
+ON a.id = o.account_id
+WHERE o.total IS NULL;
+
+SELECT COALESCE(o.account_id, a.id) account_id, a.name, a.website, a.lat, a.long, a.primary_poc, a.sales_rep_id, o.occurred_at, COALESCE(o.standard_qty, 0) standard_qty, COALESCE(o.gloss_qty,0) gloss_qty, COALESCE(o.poster_qty,0) poster_qty, COALESCE(o.total,0) total, COALESCE(o.standard_amt_usd,0) standard_amt_usd, COALESCE(o.gloss_amt_usd,0) gloss_amt_usd, COALESCE(o.poster_amt_usd,0) poster_amt_usd, COALESCE(o.total_amt_usd,0) total_amt_usd
+FROM accounts a
+LEFT JOIN orders o
+ON a.id = o.account_id
+WHERE o.total IS NULL;
+
+
+```
+
+
 
 # NORMALIZATION
 Relevant Definitions:
