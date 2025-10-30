@@ -155,6 +155,7 @@ The following advanced cleaning functions are used less often but are good to un
 
 
 # STRPOS
+<img width="638" height="266" alt="image" src="https://github.com/user-attachments/assets/69eec05b-1c6f-4ad7-a241-bbc1990a36ac" />
 
 # COALESCE
 
