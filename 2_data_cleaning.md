@@ -190,6 +190,10 @@ We would also like to create an initial password, which they will change after t
 
 
 # COALESCE
+<img width="615" height="245" alt="image" src="https://github.com/user-attachments/assets/4274905f-133b-4906-891c-b569de3152ae" />
+<img width="485" height="225" alt="image" src="https://github.com/user-attachments/assets/3e34fee5-cda6-4adb-b330-c6a238b943a8" />
+<img width="623" height="251" alt="image" src="https://github.com/user-attachments/assets/dad68064-1f9e-4866-8d25-00be5e8133ad" />
+return the first non-null values as the annual income column
 
 # NORMALIZATION
 Relevant Definitions:
