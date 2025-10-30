@@ -141,6 +141,18 @@ Execute these solutions in the below workspace.
 
 
 # POSITION
+<img width="593" height="226" alt="image" src="https://github.com/user-attachments/assets/f94aeb90-79fd-4f85-991f-d3a6d3bf986d" />
+must the info consistently locate in the same position
+<img width="580" height="206" alt="image" src="https://github.com/user-attachments/assets/eeee1939-4055-4d63-8589-09030dfd8641" />
+<img width="615" height="245" alt="image" src="https://github.com/user-attachments/assets/6bc7a53c-2375-4cfe-9046-35b00e14d52b" />
+<img width="490" height="201" alt="image" src="https://github.com/user-attachments/assets/362eaa70-d2af-4037-8201-79b927aa91e2" />
+<img width="557" height="221" alt="image" src="https://github.com/user-attachments/assets/c7620e9c-eb84-45c8-99a4-37682ddc04dc" />
+
+
+The following advanced cleaning functions are used less often but are good to understand to complete your holistic understanding of data cleaning in SQL. For the most part, these functions are used to return the position of information and help you work with NULLs.
+- Position/Strpos: Used to return the position of information to identify where relevant information is held in a string to then extract across all records
+- Coalesce: Used to return the first non-null value that’s commonly used for normalizing data that’s stretched across multiple columns and includes NULLs.
+
 
 # STRPOS
 
