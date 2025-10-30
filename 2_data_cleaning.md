@@ -157,6 +157,16 @@ The following advanced cleaning functions are used less often but are good to un
 # STRPOS
 <img width="638" height="266" alt="image" src="https://github.com/user-attachments/assets/69eec05b-1c6f-4ad7-a241-bbc1990a36ac" />
 
+```sql
+SELECT LEFT(primary_poc, STRPOS(primary_poc, ' ') -1 ) first_name, 
+RIGHT(primary_poc, LENGTH(primary_poc) - STRPOS(primary_poc, ' ')) last_name
+FROM accounts;
+
+with tab as (select *, POSITION(' ' in primary_poc) as surname_start_position from accounts limit 20)
+select left(primary_poc,surname_start_position-1) as first_name, substr(primary_poc, surname_start_position) as last_name from tab
+
+```
+
 # COALESCE
 
 # NORMALIZATION
