@@ -121,6 +121,11 @@ FROM T1;
 <img width="661" height="260" alt="image" src="https://github.com/user-attachments/assets/1e6807fd-18d5-45e2-a4ee-16684b2ffef5" />
 <img width="427" height="338" alt="image" src="https://github.com/user-attachments/assets/694ae255-352d-420a-9a03-21080904381a" />
 <img width="454" height="245" alt="image" src="https://github.com/user-attachments/assets/49a5a6ca-1fc0-483f-b5b0-a4fb6e2e111d" />
+<img width="613" height="602" alt="image" src="https://github.com/user-attachments/assets/a5c9181b-aa50-433f-ba22-e914ab71b89c" />
+<img width="710" height="515" alt="image" src="https://github.com/user-attachments/assets/ac7bd4f4-f5d5-423f-a207-deaad5fad858" />
+<img width="717" height="397" alt="image" src="https://github.com/user-attachments/assets/b4e95bb9-ddc5-4099-aa1e-61e3497610ce" />
+🔹所以这句话「|| 和 :: 是 CONCAT() 和 CAST() 的简写」——
+在 PostgreSQL 里确实如此；但在 MySQL 或 SQL Server 里就不完全对。
 
 ```sql
 select  concat(substr(date,7,4),'_',substr(date,1,2),'_',substr(date,4,2))   from sf_crime_data limit 10
