@@ -1,6 +1,7 @@
 # window function
 <img width="650" height="132" alt="image" src="https://github.com/user-attachments/assets/537edc2e-fff1-4afc-9d10-d4b3cf739ab3" />
 <img width="643" height="237" alt="image" src="https://github.com/user-attachments/assets/288c2014-fcd1-48e1-af36-dc5096d5e27e" />
+![Uploading image.png…]()
 
 ## key terms
 
