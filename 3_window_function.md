@@ -23,7 +23,12 @@ window function: https://www.postgresql.org/docs/9.1/tutorial-window.html
 <img width="970" height="682" alt="image" src="https://github.com/user-attachments/assets/e536a62b-f628-4623-9805-fcbaa71352ce" />
 在over的那个语句内部，over year from trunc, 进行了sum
 <img width="1197" height="327" alt="image" src="https://github.com/user-attachments/assets/9bc9ac48-2e7a-4afa-ac02-def10a6c9705" />
-
+```sql
+SELECT standard_amt_usd,
+       DATE_TRUNC('year', occurred_at) as year,
+       SUM(standard_amt_usd) OVER (PARTITION BY DATE_TRUNC('year', occurred_at) ORDER BY occurred_at) AS running_total
+FROM orders
+```
 
 ## Core window functions
 <img width="1002" height="400" alt="image" src="https://github.com/user-attachments/assets/5d44aebb-019f-42ff-acc5-47f3360a3ed0" />
