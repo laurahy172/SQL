@@ -17,6 +17,12 @@ window function: https://www.postgresql.org/docs/9.1/tutorial-window.html
 <img width="1167" height="586" alt="image" src="https://github.com/user-attachments/assets/c13bbaae-2d45-4cbd-8d22-bc179f8fbf38" />
 <img width="1187" height="517" alt="image" src="https://github.com/user-attachments/assets/fb9c374f-999f-447d-b226-1bf74c343c31" />
 
+## running total
+
+<img width="832" height="202" alt="image" src="https://github.com/user-attachments/assets/8c3aec67-c0a4-421d-b5d0-2d7305986cd0" />
+<img width="970" height="682" alt="image" src="https://github.com/user-attachments/assets/e536a62b-f628-4623-9805-fcbaa71352ce" />
+在over的那个语句内部，over year from trunc, 进行了sum
+<img width="1197" height="327" alt="image" src="https://github.com/user-attachments/assets/9bc9ac48-2e7a-4afa-ac02-def10a6c9705" />
 
 
 ## Core window functions
